@@ -5,6 +5,7 @@ const express = require('express'),
       massive = require('massive'),
       ctrl = require('./Controller'),
       app = express(),
+      checkUserSession = require('./Middleware/checkUserSession'),
       {
         CONNECTION_STRING,
         SERVER_PORT,
@@ -21,7 +22,7 @@ const express = require('express'),
 
   app.use(express.json())
 
-  // add checkUserSession middleware here when/if time comes
+  app.use(checkUserSession)
 
  app.use(express.static(`${__dirname}/../build`))
 
