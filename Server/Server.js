@@ -28,6 +28,7 @@ const express = require('express'),
 
 /*****************************************************************/
 // GET requests
+app.get(`/api/test`, ctrl.getTest)
 
 // POST requests
 
