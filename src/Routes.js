@@ -5,6 +5,7 @@ import History from './Components/History'
 import Home from './Components/Home'
 import ThankYous from './Components/ThankYous'
 import Volunteer from './Components/Volunteer'
+import Blog from './Components/Blog'
 
 export default (
   <Switch>
@@ -13,5 +14,6 @@ export default (
     <Route path = '/history' component = {History}/>
     <Route path = '/thankyous' component = {ThankYous}/>
     <Route path = '/volunteer' component = {Volunteer}/>
+    <Route path = '/blog' component = {Blog}/>
   </Switch>
 )
