@@ -21,11 +21,52 @@ class Home extends Component {
         </div>
 
        </section>
+
+       <section className="home_section volunteer">
        
-       <section className="home_section volunteer"></section>
+          <h2 className="volunteer_title">how can I make a difference?</h2>
+
+          <section className="volunteer_opps">
+
+            <div className="volunteer_opp">
+              <img src="#" alt="volunteering Opportunity" className="opp_img"/>
+              <h3 className="opp_title">back to school</h3>
+              <p className="opp_description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+              <button className="opp_button">CLICK ME!!!</button>
+            </div>
+
+            <div className="volunteer_opp">
+              <img src="#" alt="volunteering Opportunity" className="opp_img"/>
+              <h3 className="opp_title">Christmas</h3>
+              <p className="opp_description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+              <button className="opp_button">CLICK ME!!!</button>
+            </div>
+
+            <div className="volunteer_opp">
+              <img src="#" alt="volunteering Opportunity" className="opp_img"/>
+              <h3 className="opp_title">Donate</h3>
+              <p className="opp_description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+              <button className="opp_button">CLICK ME!!!</button>
+            </div>
+
+            <div className="volunteer_opp">
+              <img src="#" alt="volunteering Opportunity" className="opp_img"/>
+              <h3 className="opp_title">Give your time</h3>
+              <p className="opp_description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+              <button className="opp_button">CLICK ME!!!</button>
+            </div>
+
+
+          </section>
+
+       </section>
+
        <section className="home_section break_image"></section>
+
        <section className="home_section blog"></section>
+
        <section className="home_section  thank_you"></section>
+
       </div>
     )
   }
