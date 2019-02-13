@@ -69,7 +69,11 @@ class Home extends Component {
 
        </section>
 
-       <section className="home_section blog"></section>
+       <section className="home_section blog">
+
+        
+
+       </section>
 
        <section className="home_section  thank_you"></section>
 
