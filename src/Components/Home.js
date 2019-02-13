@@ -71,7 +71,22 @@ class Home extends Component {
 
        <section className="home_section blog">
 
-        
+        <h2 className="blog_title">some catchy bolg title</h2>
+
+        <div className="recent_blogs">
+          <div className="recent_blog">
+            <img src="#" alt="Blog caption" className="blog_image"/>
+            <h3 className="blog_title">title of the blog</h3>
+          </div>
+          <div className="recent_blog">
+            <img src="#" alt="Blog caption" className="blog_image"/>
+            <h3 className="blog_title">title of the blog</h3>
+          </div>
+          <div className="recent_blog">
+            <img src="#" alt="Blog caption" className="blog_image"/>
+            <h3 className="blog_title">title of the blog</h3>
+          </div>
+        </div>
 
        </section>
 
