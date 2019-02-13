@@ -61,7 +61,13 @@ class Home extends Component {
 
        </section>
 
-       <section className="home_section break_image"></section>
+       <section className="home_section break_image">
+
+        <img src="#" alt="Break Image" className="b_image"/>
+        <h2 className="quote">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, nulla?</h2>
+        <button>Click Me!!!</button>
+
+       </section>
 
        <section className="home_section blog"></section>
 
