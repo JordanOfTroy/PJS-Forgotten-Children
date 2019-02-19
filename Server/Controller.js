@@ -46,7 +46,7 @@ module.exports = {
     let {newPost} = req.body
     // This should just add a new post to the DB and probably return nothing? 
     db.new_blog_post().then(response => {
-      res.status(200).send(resposne)
+      res.status(200).send(response)
     })
     .catch(err => {
       console.log(err)
