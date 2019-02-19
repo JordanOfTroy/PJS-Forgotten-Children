@@ -87,6 +87,31 @@ module.exports = {
     })
   },
 
+  registerNewUser: (req, res) => {
+    const db = req.app.get('db')
+    const {firstName, lastName, username, password, email} = req.body
+    db.check_for_user(username).then(user => {
+      if (user[0]) {
+        res.status(200).send('Username taken. Please Try again')
+      } else {
+        const salt = bcrypt.salt(10) // makes rando string. Num declares level of security. bugger num is better.
+        const hash = bcrypt.hashSync(password, salt) // mixes password with salt to make secure string to store in database.
+        db.register_new_user(firstName, lastName, username, hash, email).then(user => {
+          // SQL NEEDS TO BE WRITTEN
+          req.session.user // makes session
+          req.session.user = user[0].username
+          req.session.session_id = session_id_Count
+          session_id_Count++
+          res.status(200).send(user[0])
+        })
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).send(err)
+    })
+  },
+
   /** ** ** ** ** PUT ** ** ** ** **/
 
   /** ** ** ** ** DELETE ** ** ** ** **/
