@@ -29,12 +29,15 @@ const express = require('express'),
 /*****************************************************************/
 // GET requests
 app.get(`/api/test`, ctrl.getTest)
+app.get('/api/blogs/:numOfBlogs', ctrl.getBlogPosts )
 
 // POST requests
+app.post(`/api/blog`, ctrl.newBlogPost)
 
 // PUT Requests
 
 // DELETE Requests
+app.delete(`/api/blog/:blogID`, ctrl.deleteBlogPost)
 
 /*****************************************************************/
 
