@@ -33,6 +33,7 @@ app.get('/api/blogs/:numOfBlogs', ctrl.getBlogPosts )
 
 // POST requests
 app.post(`/api/blog`, ctrl.newBlogPost)
+app.post(`/api/login`, ctrl.login)
 
 // PUT Requests
 
