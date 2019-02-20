@@ -42,6 +42,7 @@ app.put(`/api/updateContactInfo/:info`, ctrl.updateContactInfo)
 
 // DELETE Requests
 app.delete(`/api/blog/:blogID`, ctrl.deleteBlogPost)
+app.delete(`/api/user`, ctrl.deleteUser)
 
 /*****************************************************************/
 

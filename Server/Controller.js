@@ -190,6 +190,19 @@ module.exports = {
       console.log(err)
       res.status(500).send(err)
     })
+  },
+
+  deleteUser: (req, res) => {
+    const db = req.app.get('db')
+    // not sure what will be passed, subject ot change
+    const {username} = req.body
+    db.delete_user(username).then(() => { // SQL NEEDS TO BE WRITTEN
+      res.sendStatus(200)
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).send(err)
+    })
   }
 
 }
