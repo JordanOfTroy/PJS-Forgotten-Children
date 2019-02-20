@@ -158,7 +158,7 @@ module.exports = {
         })
     } else if (info === 'mailingAddress') {
         const {mailingAddress} = req.body
-        db.update_mailingAddress(mailingAddress).then(mailingAddress => {
+        db.update_mailing_address(mailingAddress).then(mailingAddress => {
           res.status(200).send(mailingAddress[0])
         })
         .catch(err => {
