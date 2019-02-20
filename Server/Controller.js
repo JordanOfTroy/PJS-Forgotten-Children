@@ -114,6 +114,69 @@ module.exports = {
 
   /** ** ** ** ** PUT ** ** ** ** **/
 
+  updateUserInfo: (req, res) => {
+    const db = req.app.get('db')
+    const {firstName, lastName, username, password, email} = req.body
+    // NOT sure if this is the best pattern to follow.
+    // Look up past / other projects before moving forward.
+    if (firstName) {
+      // db.update_first_name()
+    } else if (lastName) {
+      // db.update_last_name()
+    } else if (username) {
+      // db.update_username()
+    } else if (password) {
+      // db.update_password()
+    } else if (email) {
+      // de.update_email()
+    }
+  },
+
+  updateContactInfo: (req, res) => {
+    // Also not sure if this is the best pattern to follow. 
+    // Will need to do some research when I have internet connection. 
+    //  *** ALL SQL FILES NEED TO BE WRITTEN ***
+    const db = req.app.get('db')
+    const {info} = req.params
+    if (info === 'address') {
+      const {address} = req.body
+      db.update_address(address).then(address => {
+        res.status(200).send(address[0])
+      })
+      .catch(err => {
+        console.log(err)
+        res.status(500).send(err)
+      })
+    } else if (info === 'phone') {
+        const {phone} = req.body
+        db.update_phone(phone).then(phone => {
+          res.status(200).send(phone[0])
+        })
+        .catch(err => {
+          console.log(err)
+          res.status(500).send(err)
+        })
+    } else if (info === 'mailingAddress') {
+        const {mailingAddress} = req.body
+        db.update_mailingAddress(mailingAddress).then(mailingAddress => {
+          res.status(200).send(mailingAddress[0])
+        })
+        .catch(err => {
+          console.log(err)
+          res.status(500).send(err)
+        }) 
+    } else if (info === 'email') {
+        const {email} = req.body
+        db.update_email(email).then(email => {
+          res.status(200).send(email[0])
+        })
+        .catch(err => {
+          console.log(err)
+          res.status(500).send(err)
+        })
+    }
+  },
+
   /** ** ** ** ** DELETE ** ** ** ** **/
 
   deleteBlogPost: (req, res) => { // SQL NEEDS TO BE WRITTEN

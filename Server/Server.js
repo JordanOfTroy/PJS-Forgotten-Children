@@ -37,6 +37,8 @@ app.post(`/api/login`, ctrl.login)
 app.post(`/api/register`, ctrl.registerNewUser)
 
 // PUT Requests
+app.put(`/api/user`, ctrl.updateUserInfo)
+app.put(`/api/updateContactInfo/:info`, ctrl.updateContactInfo)
 
 // DELETE Requests
 app.delete(`/api/blog/:blogID`, ctrl.deleteBlogPost)
